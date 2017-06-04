@@ -12,3 +12,10 @@ Código y ejercicios del libro [Beginning Haskell](http://www.apress.com/us/book
   - [Instalar Haskell](https://github.com/haskell-esp/ejercicios-beginning-haskell/tree/master/cap01#instalar-haskell)
   - [Ejecución](https://github.com/haskell-esp/ejercicios-beginning-haskell/tree/master/cap01#ejecución)
 
+module "$HOME/.zshrc" where
+
+main =
+  if installed? stack 
+  then export PATH (stack path --bin-path)
+  else export PATH ""
+  
